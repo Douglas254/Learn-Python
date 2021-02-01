@@ -1,3 +1,5 @@
+import math
+
 # print Hello world to the screen
 
 print("Hello World")
@@ -27,9 +29,12 @@ print(course[-1])  # Prints the last character of the string
 
 # slicing [index:index]
 # Prints the first three characters starting from index 0 to 2
+
 print(course[0:3])
 print(course[0:])  # prints the whole character
+
 # Prints the first three characters starting from index 0 to 2
+
 print(course[:3])
 print(course[:])  # Prints the whole character string
 new_name = course[:]  # copies contents of the string to the new-string name
@@ -37,33 +42,86 @@ print(new_name)
 
 # Escape Sequences i.e \", \', \\, \n
 # Escaping character \ and Escape sequence \", \', \\, \n
+
 course = "Python \"programming"
 print(course)
 
 # Formatting Strings
 # String Concatenation
+
 first = "Douglas"
 last = "Obara"
 full = first + " " + last
 print(full)
 
 # F string formatting
+
 full = f"{first} {last}"
 print(full)
 
 # String Methods
+
 course = "  python programming"
 print(course.upper())
 print(course.lower())
 print(course.title())  # Capitalize the fist letter of every word
 print(course.strip())  # Removes white spaces with rstrip or lstrip
-# finds the index of the specified word and if return -1 no char
+
+# finds the index of the specified word and if not found return -1 no char
+
 print(course.find("pro"))
 print(course.replace("p", "r"))  # Replaces p with r
+
 # check if element/char exist in a char
 # returns a boolean value , if misspelled returns false.
+
 print("pro" in course)  # return True
 print("swift" not in course)  # return True
 print("Pro" in course)  # return False
 
+# Arithmetic Operations
 
+print(5 + 3)  # Addition
+print(5 - 3)  # subtraction
+print(5 * 3)  # multiplication
+print(5 / 3)  # floating value
+print(5//3)  # returns only whole numbers
+print(5 % 3)  # returns remainder
+print(5**3)  # returns the power of a number
+
+# Incrementing/Decrementing Values
+
+i = 3
+i = i + 3
+print(i)  # return 6
+
+i += 3
+print(i)  # return 9 after incrementing 6 by 3
+
+i -= 3
+print(i)  # return 6 after decrementing by 3 ,i-=3 is same as i = i - 3.
+
+# Working with Numbers
+
+print(round(3.7))  # round off a number to the nearest whole number
+print(abs(-3.7))  # Returns a positive integer
+
+# Math Function
+
+i = 6.3
+print(math.ceil(i))
+print(math.floor(i))
+
+# Type conversion i.e int(),float(),str(),bool()
+x = input("X: ")
+y = int(x) * 2
+print(f"X: {x} , Y: {y}")
+
+# Falsy values
+# ""
+# 0
+# None
+
+print(bool(""))
+print(bool(0))
+print(bool(None))
