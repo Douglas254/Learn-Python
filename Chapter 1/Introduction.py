@@ -125,3 +125,125 @@ print(f"X: {x} , Y: {y}")
 print(bool(""))
 print(bool(0))
 print(bool(None))
+
+# comparison operators - they are used to compare values
+# >  # Greater than
+# >=  # Greater than or equal to
+# <  # Less than
+# <=  # Less than or equal to
+# ==  # Equality operator
+# !=  # Not equal operator
+
+
+# Conditional statements
+# if statement
+
+temperature = 35
+if temperature > 30:
+    print("It's Warm")
+    print("Drink water")
+elif temperature > 20:
+    print("It's nice")
+else:
+    print("It's cold")
+print("Done")  # This statement will execute whether the condition is true or not
+
+# Ternary Operator
+age = 24
+message = "Eligible" if age >= 18 else "Not Eligible"
+print(message)
+
+# Logical Operators
+# AND Operator - if both operators are true the result will be true
+high_income = True
+good_credit = True
+
+if high_income and good_credit:
+    print("Eligible")
+else:
+    print("Not Eligible")
+
+# OR Operator - if one of the condition is true the result will be true
+high_income = False
+good_credit = True
+
+if high_income or good_credit:
+    print("Eligible")
+else:
+    print("Not Eligible")
+
+# NOT Operator
+high_income = False
+good_credit = True
+student = False
+
+if not student:
+    print("Eligible")
+else:
+    print("Not Eligible")
+
+# Combining all operators in complex
+if (high_income or good_credit) and not student:
+    print("Eligible")
+else:
+    print("Not Eligible")
+
+# Short circuit evaluation
+high_income = True
+good_credit = True
+student = True
+
+if high_income and good_credit and not student:
+    print("Eligible")
+else:
+    print("Not Eligible")
+
+# Chaining comparison operators
+# age should be between 18 and 65
+age = 22
+if 18 <= age < 65:  # same as age >= 18 and age < 65
+    print("Eligible")
+
+# Looping
+# FOR Loop
+for number in range(1, 10, 2):
+    print("Attempt", number, number * "*")
+
+# FOR ELSE Loop
+successful = True  # When False the else statement will be executed
+for number in range(3):
+    print("Attempt")
+    if successful:
+        print("Successful")
+        break
+else:
+    print("Attempted 3 times and failed")
+
+# Nested Loop
+for x in range(5):
+    for y in range(3):
+        print(f"({x}, {y})")
+
+# Iterable
+for x in "python":
+    print(x)
+
+# While Loop
+command = ""
+while command.lower() != "quit":
+    command = input(">")
+    print("ECHO", command)
+
+# Infinite Loop - Loops that run forever
+while True:
+    command = input(">")
+    print("ECHO", command)
+    break  # we use the break keyword to terminate the loop
+
+#  Program to display even numbers between 1 to 10 and display message "We have 4 even numbers"
+count = 0
+for number in range(1, 10):
+    if number % 2 == 0:
+        print(number)
+        count = count + 1
+print(f"We have {count} even numbers")
