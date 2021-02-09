@@ -79,6 +79,7 @@ message = "a"  # global variable
 
 
 def greet_variable(name):
+    global message  # making message variable globally using global keyword
     message = "b"  # Local variable
     return name
 
