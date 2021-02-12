@@ -100,3 +100,14 @@ del dict1  # deletes an entire dictionary
 """ multi
           line
                  comment"""
+
+
+# Dictionary comprehension
+values = {}
+for x in range(5):
+    values[x] = x * 3
+print(values)
+
+# comprehension
+values = {x: x * 3 for x in range(5)}
+print(values)  # {0: 0, 1: 3, 2: 6, 3: 9, 4: 12}
