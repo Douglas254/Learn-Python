@@ -12,7 +12,7 @@ try:
     id_number = int(input("Enter id: "))
     salary = 20000
     savings = salary/id_number
-    print(id_number)
+    print(savings)
 except ZeroDivisionError:
     print("Id number cannot be Zero")
 except ValueError:
@@ -27,9 +27,33 @@ except ValueError:
 try:
     age = int(input("Enter age"))
     xfactor = 10 / age
-except ValueError:
+except (ValueError, ZeroDivisionError):
     print("Please enter a valid age")
-except ZeroDivisionError:
-    print("Age cannot be zero")
+else:
+    print("No exceptions were thrown in the process")
+
+
+# cleaning up
+try:
+    file = open("exceptions and error handling.py")
+    age = int(input("Enter age"))
+    xfactor = 10 / age
+except (ValueError, ZeroDivisionError):
+    print("Please enter a valid age")
+else:
+    print("No exceptions were thrown in the process")
+finally:
+    file.close()
+
+
+# The with statement
+try:
+    with open("exceptions and error handling.py") as file:
+        print("File opened.")
+
+    age = int(input("Enter age"))
+    xfactor = 10 / age
+except (ValueError, ZeroDivisionError):
+    print("Please enter a valid age")
 else:
     print("No exceptions were thrown in the process")
