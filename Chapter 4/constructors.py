@@ -45,3 +45,23 @@ another = Points(6, 8)
 another.z = 9
 another.draw()
 print(another.default_color)
+
+
+# class vs instance method
+class Point2:
+    # creating constructor
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    # creating method
+    @classmethod  # decorator is a way to extend the behaviour of a method or function
+    def Zero(cls):
+        return cls(0, 0)
+
+    def draw(self):
+        print(f"point({self.x},{self.y})")
+
+
+point = Point2.Zero()
+point.draw()
