@@ -7,8 +7,10 @@ class Point:
         print("draw")
 
 
-Point = Point()
-print(type(Point))
+point = Point()
+print(type(point))
+# check if point object is an instance of Point class
+print(isinstance(point, Point))
 
 
 # Class parameters
@@ -18,9 +20,9 @@ class Points:
 
     def plot(self):
         print("plot")
+
+
 # you can create different objects from same class
-
-
 point1 = Points()
 point1.x = 5
 point1.y = 8
