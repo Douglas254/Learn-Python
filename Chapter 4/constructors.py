@@ -109,3 +109,68 @@ dog.legs()
 cow = Animal("Cow", 4, "Grass")
 cow.eating()
 cow.legs()
+
+
+# Magic methods
+# Are methods that have two underscores __ at the beginning and the end of the name and
+# are called automatic by the python interpreter depending on how we use our object and classes.
+# __init__ and __str__ are the mostly used magical methods
+
+
+class Point3:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return f"point({self.x}, {self.y})"
+
+    def draw(self):
+        print(f"we have point({self.x}, {self.y})")
+
+
+point = Point3(0, 7)
+point.draw()
+print(point)
+
+
+# comparing objects: we use comparison magic methods to perform this operations
+# __eq__ : eguality operator
+# __gt__: greater than operator
+
+class Comparing:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __eq__(self, other):  # equality operator
+        return self.x == other.x and self.y == other.y
+
+    def __gt__(self, other):  # greater-than operator
+        return self.x > other.x and self.y > other.y
+
+        # Arithmetic operations
+    def __add__(self, other):
+        return Comparing(self.x + other.x, self.y + other.y)
+
+
+point = Comparing(10, 20)
+other = Comparing(5, 10)
+print(point == other)  # False
+print(point > other)  # True
+combined = point + other
+print(combined.x, combined.y)
+
+
+class Comp:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __lt__(self, other):
+        return self.x < other.x and self.y < other.y
+
+
+first = Comp(5, 6)
+other = Comp(3, 4)
+print(first < other)
