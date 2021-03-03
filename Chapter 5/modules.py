@@ -21,14 +21,14 @@
 # # import sys
 # print(sys.path)
 
-import ecommerce.sales_module
+import ecommerce.shopping.sales_module
 # OR
-from ecommerce import sales_module
+from ecommerce.shopping import sales_module
 # OR
-from ecommerce.sales_module import cal_shipping, cal_tax
+from ecommerce.shopping.sales_module import cal_shipping, cal_tax
 
-ecommerce.sales_module.cal_shipping()  # calling sales_module function
-ecommerce.sales_module.cal_tax()
+ecommerce.shopping.sales_module.cal_shipping()  # calling sales_module function
+ecommerce.shopping.sales_module.cal_tax()
 sales_module.cal_shipping()  # calling sales_module function
 sales_module.cal_tax()
 cal_shipping()  # calling sales_module function
