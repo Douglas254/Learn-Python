@@ -43,3 +43,6 @@ print(isinstance(m, object))  # True
 print(issubclass(object, Animal))  # False
 
 # Method overriding this is the replacing or extending a method defined in the Base class
+
+
+# Multi-Level inheritance
